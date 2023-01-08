@@ -1,3 +1,3 @@
-std_msgs/Int64 attention
-std_msgs/Int64 emotion
+std_msgs/String attention
+std_msgs/String emotion
 sensor_msgs/Image visualization_frame
