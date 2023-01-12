@@ -54,6 +54,7 @@ add_message_files(
     FILES
     TrackingReIDResult.msg
     EmotionAttentionResult.msg
+    DialogueLog.msg
     )
 
 ## Generate services in the 'srv' folder
