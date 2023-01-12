@@ -64,10 +64,12 @@ package() {
         name=head-$dist-$pkgname
         ROS_PREFIX=/opt/ros/$dist
 
+        #remove version & date
+        #-p $BASEDIR/${name}_VERSION_ARCH.deb \
         fpm -C "${BASEDIR}" -s dir -t deb -n "${name}" -v "${version#v}" --vendor "${VENDOR}" \
             --url "${url}" --description "${desc}" ${ms} --force \
             --deb-no-default-config-files \
-            -p $BASEDIR/${name}_VERSION_ARCH.deb \
+            -p $BASEDIR/${name}.deb \
             install/include=${ROS_PREFIX}/ \
             install/share=${ROS_PREFIX}/ \
             install/lib/pkgconfig/=${ROS_PREFIX}/lib/pkgconfig/ \
